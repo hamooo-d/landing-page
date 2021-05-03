@@ -26,6 +26,10 @@ module.exports = {
         display: 'standalone',
         icon: 'src/images/icon.png',
       },
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#97266D`,
+      },
     },
   ],
 }

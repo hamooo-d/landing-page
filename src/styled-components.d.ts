@@ -1,4 +1,4 @@
-import { DefaultTheme } from './Theme'
+import { DefaultTheme } from './theme'
 
 type ThemeInterface = typeof DefaultTheme
 
