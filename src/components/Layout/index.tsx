@@ -15,13 +15,13 @@ const Layout: React.FC = ({ children }) => {
         {children}
         <Footer>
           <IconContainer>
-            <FaFacebookF color={theme.text.light} />
+            <FaFacebookF color={theme?.text?.light} />
           </IconContainer>
           <IconContainer>
-            <FaInstagram color={theme.text.light} />
+            <FaInstagram color={theme?.text?.light} />
           </IconContainer>
           <IconContainer>
-            <FaTwitter color={theme.text.light} />
+            <FaTwitter color={theme?.text?.light} />
           </IconContainer>
         </Footer>
       </Container>

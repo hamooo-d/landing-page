@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-export const wrapPageElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
   return (
     <ThemeContextProvider>
       <Helmet title="Landing Site" htmlAttributes={{ lang: 'en' }} />
@@ -33,6 +33,7 @@ export const wrapPageElement = ({ element }) => {
 
 const SCThemeProvider = ({ children }) => {
   const { currentTheme } = useThemeContext()
+
   return (
     <ThemeProvider theme={currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
       {children}

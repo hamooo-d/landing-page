@@ -1,3 +1,4 @@
+// Shared values between both themes
 const SharedValues = {
   primary: {
     main: '#97266D',
