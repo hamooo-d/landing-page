@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
       </Logo>
       <Navigators>
         <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/">Features</StyledLink>
+        <StyledLink to="/features">Features</StyledLink>
         <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/">Contact</StyledLink>
+        <StyledLink to="/contact">Contact</StyledLink>
       </Navigators>
       <Entry>
         <SignupButton>SIGN UP</SignupButton>
