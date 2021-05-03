@@ -1,5 +1,5 @@
 import React from 'react'
-import { DarkTheme, DefaultTheme } from './src/theme'
+import { DarkTheme, DefaultTheme } from './src/Theme'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { ThemeContextProvider, useThemeContext } from './src/context/ThemeContext'
 import '@fontsource/open-sans'
