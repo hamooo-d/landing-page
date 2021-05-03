@@ -1,54 +1,50 @@
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Landing Page - CESC Interview
 </h1>
+A simple landing page buit for CSEC Interview question. I chose to built it with gatsby rather than nextjs or cra simply because landing page website is a static site so gatsby is perfect for this mission.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Clone project repo.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    Use the Git CLI to clone the project.
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    # clone repo from http
+    git clone https://github.com/ahmedmohamed-hue/landing-page.git
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Install depends**
 
-    Your site is now running at http://localhost:8000!
+    Navigate into your directory and run installation command.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    ```shell
+    # move to project dir
+    cd landing-page/
+    
+    # npm
+    npm install
+    
+	#yarn
+	yarn
+	 
+	# after the installation finishes run
+	npm run develop 
+    ```
 
-4.  **Learn more**
+3.  **Open the code and start developing!**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    The project is now running at http://localhost:8000!
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 🚀 Super Fast Quick Start 🚀( Live Demo )
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+[Live Demo ](https://landingpageproduction.gatsbyjs.io/)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Live demo deployed on gatsby cloud with high lighthouse score.
