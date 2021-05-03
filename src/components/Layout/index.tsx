@@ -34,7 +34,7 @@ const Container = styled.div({
 
 const Footer = styled.footer({
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'flex-end',
   justifyContent: 'flex-end',
   padding: '1rem 4rem',
 })
@@ -53,13 +53,15 @@ const IconContainer = styled.div({
   ':last-child': {
     marginRight: 0,
   },
-
   '& > *': {
     transition: 'all .5s',
   },
   ':hover': {
     '& > *': {
       transform: 'rotate(360deg)',
+    },
+    '& > :nth-child(1)': {
+      color: '#7962ad !important',
     },
   },
 })

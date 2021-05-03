@@ -1,15 +1,20 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { AiOutlineMenu } from 'react-icons/ai'
 import styled, { keyframes } from 'styled-components'
+import { device } from '../../constants'
 
 const Navbar: React.FC = () => {
   return (
     <Container>
-      <Logo>Logo</Logo>
+      <Logo>
+        <StyledMenuIcon />
+        <LogoText style={{ marginLeft: 16 }}>Logo</LogoText>
+      </Logo>
       <Navigators>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/">Features</StyledLink>
-        <StyledLink to="/">About</StyledLink>
+        <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/">Contact</StyledLink>
       </Navigators>
       <Entry>
@@ -26,13 +31,32 @@ const Container = styled.nav({
   alignItems: 'center',
   width: '100%',
   padding: '1rem 4rem',
+  [device.tablet]: {
+    padding: '1rem 1rem',
+  },
 })
 
 const Logo = styled.div({
   flex: 1,
+  display: 'flex',
+  alignItems: 'center',
   textTransform: 'uppercase',
   fontSize: '30px',
   fontFamily: 'Montserrat',
+})
+
+const LogoText = styled.span({
+  marignLeft: 16,
+  [device.tablet]: {
+    display: 'none',
+  },
+})
+
+const StyledMenuIcon = styled(AiOutlineMenu)({
+  display: 'none',
+  [device.laptop]: {
+    display: 'block',
+  },
 })
 
 const Navigators = styled.div({
@@ -40,6 +64,9 @@ const Navigators = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  [device.laptop]: {
+    display: 'none',
+  },
 })
 
 const StyledLink = styled(Link)({
@@ -56,10 +83,13 @@ const StyledLink = styled(Link)({
 })
 
 const Entry = styled.div({
-  flex: 1,
   display: 'flex',
+  flex: 1,
   justifyContent: 'flex-end',
   alignItems: 'center',
+  [device.laptop]: {
+    flex: 'inherit',
+  },
 })
 
 const scale = keyframes`
@@ -87,7 +117,7 @@ const Button = styled.button`
   }
 `
 const SignupButton = styled(Button)({
-  background: '#A9A8F6',
+  background: '#7962ad',
   color: '#fff',
   border: 0,
   transition: 'background .3s ease-in',

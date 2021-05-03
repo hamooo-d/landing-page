@@ -1,7 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import Hero from '../images/Sample 16.png'
+import { device } from '../constants'
+import Hero from '../images/hero.png'
 
 const IndexPage: React.FC = () => {
   return (
@@ -29,6 +30,10 @@ const Container = styled.div({
   display: 'flex',
   justifyContent: 'center',
   padding: '1rem 5rem',
+  [device.laptop]: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
 })
 
 const Content = styled.div({
@@ -36,10 +41,17 @@ const Content = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  order: 1,
+  [device.laptop]: {
+    order: 1,
+    marginTop: '2rem',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 })
 
 const Title = styled.h4({
-  color: '#A9A8F6',
+  color: '#7962ad',
   textTransform: 'uppercase',
   fontSize: '16px',
   marginBottom: '1rem',
@@ -50,12 +62,24 @@ const Header = styled.h1({
   fontSize: '4rem',
   width: '80%',
   textTransform: 'uppercase',
+  '::selection': {
+    background: 'none',
+    color: '#7962ad',
+  },
+  [device.laptop]: {
+    width: 'auto',
+    textAlign: 'center',
+  },
 })
 
 const Paragraph = styled.p({
   color: '#646464',
   width: '50%',
   marginBottom: '1rem',
+  [device.laptop]: {
+    width: 'auto',
+    textAlign: 'center',
+  },
 })
 
 const Button = styled.button`
@@ -71,7 +95,7 @@ const Button = styled.button`
 `
 
 const ContactUsButton = styled(Button)({
-  background: '#A9A8F6',
+  background: '#7962ad',
   color: '#fff',
   border: 0,
   transition: 'background .3s ease-in',
@@ -85,6 +109,11 @@ const HeroWrapper = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  order: 2,
+  [device.laptop]: {
+    order: 2,
+    marginTop: '2rem',
+  },
 })
 
 export default IndexPage
