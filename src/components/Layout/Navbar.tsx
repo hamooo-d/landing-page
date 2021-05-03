@@ -48,7 +48,7 @@ const StyledLink = styled(Link)({
   fontSize: '16px',
   marginRight: '1.5em',
   ':hover': {
-    color: '#000',
+    color: '#000000',
   },
   ':last-child': {
     marginRight: 0,
@@ -87,12 +87,12 @@ const Button = styled.button`
   }
 `
 const SignupButton = styled(Button)({
-  background: '#4257DE',
+  background: '#A9A8F6',
   color: '#fff',
   border: 0,
   transition: 'background .3s ease-in',
   '&:hover': {
-    background: '#6175f8',
+    background: '#bab8ff',
   },
 })
 
