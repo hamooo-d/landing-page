@@ -6,7 +6,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <Container>
       <Navbar />
-      <Main>{children}</Main>
+      {children}
       <Footer>
         <h1>Footer</h1>
       </Footer>
@@ -21,18 +21,11 @@ const Container = styled.div({
   minHeight: '100vh',
 })
 
-const Main = styled.main({
-  flexGrow: 1,
-  width: '100%',
-  background: 'blue',
-})
-
 const Footer = styled.footer({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',
-  padding: '1rem 2rem',
-  backgroundColor: 'green',
+  padding: '1rem 4rem',
 })
 
 export default Layout
