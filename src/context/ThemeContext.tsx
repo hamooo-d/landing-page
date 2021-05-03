@@ -22,9 +22,7 @@ export const ThemeContextProvider: React.FC = ({ children }) => {
   }
 
   useEffect(() => {
-    if (localStorage && localStorage.getItem('theme') === 'dark') {
-      setTheme('dark')
-    }
+    setTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light')
   }, [])
 
   const value = { currentTheme, toggleTheme }
