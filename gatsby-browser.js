@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 export const wrapPageElement = ({ element }) => {
   return (
     <ThemeContextProvider>
-      <Helmet htmlAttributes={{ lang: 'en' }} />
+      <Helmet title="Landing Site" htmlAttributes={{ lang: 'en' }} />
       <SCThemeProvider>
         <GlobalStyles />
         {element}

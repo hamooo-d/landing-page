@@ -7,25 +7,22 @@ import Hero from '../images/hero.png'
 
 const IndexPage: React.FC = () => {
   return (
-    <>
-      <Helmet title="Landing Page" defer={false} />
-      <Layout>
-        <Container>
-          <Content>
-            <Title>CREATE YOUR FUTURE WITH US.</Title>
-            <Header>The Best Workspace</Header>
-            <Paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eaque aliquam
-              repellendus corporis ut, earum asperiores harum corrupti saepe error.
-            </Paragraph>
-            <ContactUsButton>Contact Us</ContactUsButton>
-          </Content>
-          <HeroWrapper>
-            <img style={{ width: '100%', height: 'auto' }} src={Hero} alt="hero-img" />
-          </HeroWrapper>
-        </Container>
-      </Layout>
-    </>
+    <Layout>
+      <Container>
+        <Content>
+          <Title>CREATE YOUR FUTURE WITH US.</Title>
+          <Header>The Best Workspace</Header>
+          <Paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eaque aliquam repellendus
+            corporis ut, earum asperiores harum corrupti saepe error.
+          </Paragraph>
+          <ContactUsButton>Contact Us</ContactUsButton>
+        </Content>
+        <HeroWrapper>
+          <img style={{ width: '100%', height: 'auto' }} src={Hero} alt="hero-img" />
+        </HeroWrapper>
+      </Container>
+    </Layout>
   )
 }
 
