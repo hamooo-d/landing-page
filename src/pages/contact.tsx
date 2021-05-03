@@ -6,7 +6,7 @@ const Features: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <h1>Contact page</h1>
+        <Header>Contact page</Header>
       </Container>
     </Layout>
   )
@@ -17,5 +17,9 @@ const Container = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
 })
+
+const Header = styled.h1(({ theme }) => ({
+  color: theme.text.primary,
+}))
 
 export default Features

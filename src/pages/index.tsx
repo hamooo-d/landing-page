@@ -54,37 +54,38 @@ const Content = styled.div({
   },
 })
 
-const Title = styled.h4({
-  color: '#7962ad',
+const Title = styled.h4(({ theme }) => ({
+  color: theme.primary.main,
   textTransform: 'uppercase',
   fontSize: '16px',
   marginBottom: '1rem',
-})
+}))
 
-const Header = styled.h1({
+const Header = styled.h1(({ theme }) => ({
   marginBottom: '1rem',
   fontSize: '4rem',
   width: '80%',
   textTransform: 'uppercase',
+  color: theme.text.primary,
   '::selection': {
     background: 'none',
-    color: '#7962ad',
+    color: theme.primary.main,
   },
   [device.laptop]: {
     width: 'auto',
     textAlign: 'center',
   },
-})
+}))
 
-const Paragraph = styled.p({
-  color: '#646464',
+const Paragraph = styled.p(({ theme }) => ({
+  color: theme.text.light,
   width: '50%',
   marginBottom: '1rem',
   [device.laptop]: {
     width: 'auto',
     textAlign: 'center',
   },
-})
+}))
 
 const Button = styled.button`
   & {
@@ -98,15 +99,15 @@ const Button = styled.button`
   }
 `
 
-const ContactUsButton = styled(Button)({
-  background: '#7962ad',
+const ContactUsButton = styled(Button)(({ theme }) => ({
+  background: theme.primary.main,
   color: '#fff',
   border: 0,
   transition: 'background .3s ease-in',
   '&:hover': {
-    background: '#bab8ff',
+    background: theme.primary.light,
   },
-})
+}))
 
 const HeroWrapper = styled.div({
   flex: 1,

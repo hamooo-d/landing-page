@@ -6,16 +6,21 @@ const About: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <h1>About page</h1>
+        <Header>About page</Header>
       </Container>
     </Layout>
   )
 }
+
 const Container = styled.div({
   flexGrow: 1,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 })
+
+const Header = styled.h1(({ theme }) => ({
+  color: theme.text.primary,
+}))
 
 export default About

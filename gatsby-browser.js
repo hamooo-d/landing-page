@@ -1,6 +1,9 @@
 import React from 'react'
-import { createGlobalStyle } from 'styled-components'
+import { DarkTheme, DefaultTheme } from './src/Theme'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { ThemeContextProvider, useThemeContext } from './src/context/ThemeContext'
 import '@fontsource/open-sans'
+import { Helmet } from 'react-helmet'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -11,15 +14,28 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #F7FBFC;
+    transition: background-color .3s;
+    background-color: ${({ theme }) => theme.background};
   }
 `
 
 export const wrapPageElement = ({ element }) => {
   return (
-    <>
-      <GlobalStyles />
-      {element}
-    </>
+    <ThemeContextProvider>
+      <Helmet htmlAttributes={{ lang: 'en' }} />
+      <SCThemeProvider>
+        <GlobalStyles />
+        {element}
+      </SCThemeProvider>
+    </ThemeContextProvider>
+  )
+}
+
+const SCThemeProvider = ({ children }) => {
+  const { currentTheme } = useThemeContext()
+  return (
+    <ThemeProvider theme={currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
+      {children}
+    </ThemeProvider>
   )
 }

@@ -36,14 +36,15 @@ const Container = styled.nav({
   },
 })
 
-const Logo = styled.div({
+const Logo = styled.div(({ theme }) => ({
   flex: 1,
   display: 'flex',
   alignItems: 'center',
   textTransform: 'uppercase',
   fontSize: '30px',
   fontFamily: 'Montserrat',
-})
+  color: theme.text.primary,
+}))
 
 const LogoText = styled.span({
   marignLeft: 16,
@@ -69,18 +70,18 @@ const Navigators = styled.div({
   },
 })
 
-const StyledLink = styled(Link)({
-  color: '#575757',
+const StyledLink = styled(Link)(({ theme }) => ({
+  color: theme.text.light,
   textDecoration: 'none',
   fontSize: '16px',
   marginRight: '1.5em',
   ':hover': {
-    color: '#000000',
+    color: theme.text.primary,
   },
   ':last-child': {
     marginRight: 0,
   },
-})
+}))
 
 const Entry = styled.div({
   display: 'flex',
@@ -116,25 +117,25 @@ const Button = styled.button`
     animation: ${scale} 0.3s linear;
   }
 `
-const SignupButton = styled(Button)({
-  background: '#7962ad',
+const SignupButton = styled(Button)(({ theme }) => ({
+  background: theme.primary.main,
   color: '#fff',
   border: 0,
   transition: 'background .3s ease-in',
   '&:hover': {
-    background: '#bab8ff',
+    background: theme.primary.light,
   },
-})
+}))
 
-const LoginButton = styled(Button)({
-  background: '#fff',
-  color: '#2F2F2F',
-  border: '1px solid #4b4b4b',
-  transition: 'all .1s ease-in',
+const LoginButton = styled(Button)(({ theme }) => ({
+  background: 'inherit',
+  color: theme.text.primary,
+  border: `2px solid ${theme.text.primary}`,
+  transition: 'all .3s ease-in',
   '&:hover': {
-    color: '#797979',
-    border: '1px solid #797979',
+    color: theme.text.light,
+    border: `2px solid ${theme.text.light}`,
   },
-})
+}))
 
 export default Navbar

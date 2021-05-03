@@ -1,27 +1,32 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { ThemeContext, useTheme } from 'styled-components'
 import Navbar from './Navbar'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
+import SwitchTheme from '../SwitchTheme'
 
 const Layout: React.FC = ({ children }) => {
+  const theme = useTheme()
   return (
-    <Container>
-      <Navbar />
-      {children}
-      <Footer>
-        <IconContainer>
-          <FaFacebookF color="#696969" />
-        </IconContainer>
-        <IconContainer>
-          <FaInstagram color="#696969" />
-        </IconContainer>
-        <IconContainer>
-          <FaTwitter color="#696969" />
-        </IconContainer>
-      </Footer>
-    </Container>
+    <>
+      <Container>
+        <Navbar />
+        {children}
+        <Footer>
+          <IconContainer>
+            <FaFacebookF color={theme.text.light} />
+          </IconContainer>
+          <IconContainer>
+            <FaInstagram color={theme.text.light} />
+          </IconContainer>
+          <IconContainer>
+            <FaTwitter color={theme.text.light} />
+          </IconContainer>
+        </Footer>
+      </Container>
+      <SwitchTheme />
+    </>
   )
 }
 
@@ -41,12 +46,12 @@ const Footer = styled.footer({
 
 const ICON_SIZE = 36
 
-const IconContainer = styled.div({
+const IconContainer = styled.div(({ theme }) => ({
   display: 'grid',
   placeItems: 'center',
   width: ICON_SIZE,
   height: ICON_SIZE,
-  border: '1px solid #696969',
+  border: `2px solid ${theme.text.light}`,
   borderRadius: '50%',
   cursor: 'pointer',
   marginRight: '1rem',
@@ -57,13 +62,14 @@ const IconContainer = styled.div({
     transition: 'all .5s',
   },
   ':hover': {
+    border: `2px solid ${theme.mode === 'dark' ? theme.text.primary : theme.primary.main}`,
     '& > *': {
       transform: 'rotate(360deg)',
     },
     '& > :nth-child(1)': {
-      color: '#7962ad !important',
+      color: `${theme.primary.main} !important`,
     },
   },
-})
+}))
 
 export default Layout
